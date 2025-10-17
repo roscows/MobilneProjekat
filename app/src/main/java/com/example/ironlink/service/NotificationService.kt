@@ -74,8 +74,8 @@ class NotificationService : Service() {
                 for (document in documents) {
                     val partner = document.toObject(TrainingPartner::class.java)
                     partner?.let {
-                        val lat = it.latitude ?: return@let  // Zamenjeno za break
-                        val lng = it.longitude ?: return@let  // Zamenjeno za break
+                        val lat = it.latitude ?: return@let
+                        val lng = it.longitude ?: return@let
                         val objectLocation = Location("").apply {
                             latitude = lat
                             longitude = lng

@@ -10,9 +10,8 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />  <!-- Dodato za location service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
 
-    <!-- Hardware feature za camera (required="false" da izbegneš grešku) -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
@@ -27,7 +26,7 @@
 
         <service
             android:name=".service.NotificationService"
-            android:foregroundServiceType="location" />  <!-- Dodato za API 34+ -->
+            android:foregroundServiceType="location" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD6iZ9U-JTQ_S8zXkx0AJ5u9_tQn-89a80" />

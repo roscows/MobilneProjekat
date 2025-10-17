@@ -48,7 +48,7 @@ fun LeaderboardPage(navController: NavController) {
                 val sortedUsers = fetchedUsers.sortedByDescending { it.points }
                 val userWithPositionList = mutableListOf<UserWithPosition>()
                 var currentPosition = 1
-                var lastPoints = -1L // Ispravljeno na Long
+                var lastPoints = -1L
                 var lastPosition = 0
 
                 for (user in sortedUsers) {
@@ -72,7 +72,6 @@ fun LeaderboardPage(navController: NavController) {
     }
 
     Scaffold(
-        // Sada koristi importirane funkcije
         bottomBar = { BottomNavigationBar(navController, getCurrentRoute(navController)) }
     ) { paddingValues ->
         Column(

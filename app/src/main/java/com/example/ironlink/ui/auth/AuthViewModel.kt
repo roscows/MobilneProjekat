@@ -78,7 +78,7 @@ class AuthViewModel : ViewModel() {
 
     fun logout() {
         auth.signOut()
-        _authState.value = AuthState.Idle // Resetujemo stanje da bi se UI eventualno ažurirao
+        _authState.value = AuthState.Idle
     }
 
     internal suspend fun uploadToCloudinary(uri: Uri, context: Context): String? = withContext(Dispatchers.IO) {
@@ -106,13 +106,13 @@ class AuthViewModel : ViewModel() {
                 }
 
                 override fun onReschedule(requestId: String?, error: ErrorInfo?) {
-                    // Ponovni pokušaj ako treba
+                    // Ponovni pokusaj ako treba
                 }
             })
 
-            val requestId = uploadRequest.dispatch()  // dispatch vraća requestId kao String?
+            val requestId = uploadRequest.dispatch()  // dispatch vraca requestId kao String?
 
-            // Otkaži upload ako se coroutine otkaže
+            // Otkazi upload ako se coroutine otkaze
             continuation.invokeOnCancellation {
                 MediaManager.get().cancelRequest(requestId)
             }

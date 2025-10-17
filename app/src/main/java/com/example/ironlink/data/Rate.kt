@@ -3,5 +3,4 @@ package com.example.ironlink.data
 data class Rate(
     val userId: String = "",
     val partnerId: String = "",
-    val value: Int = 0  // 1-5 zvezdica
-)
+    val value: Int = 0

@@ -16,7 +16,7 @@ import androidx.navigation.NavController
 import com.example.ironlink.data.Rate
 import com.example.ironlink.data.TrainingPartner
 import com.example.ironlink.ui.common.BottomNavigationBar
-import com.google.firebase.firestore.FirebaseFirestore // <-- KLJUČNI IMPORT KOJI JE FALIO
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.text.DecimalFormat

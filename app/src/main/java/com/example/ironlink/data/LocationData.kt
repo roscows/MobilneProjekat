@@ -2,7 +2,7 @@ package com.example.ironlink.data
 
 import kotlinx.serialization.Serializable
 
-@Serializable  // Ako koristiš serialization, inače ukloni
+@Serializable
 data class LocationData(
     val userId: String = "",
     val latitude: Double = 0.0,
